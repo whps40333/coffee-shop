@@ -1,4 +1,4 @@
-import classes from "../../../styles/clrButton.module.css";
+import classes from "../../../styles/ClrButton.module.css";
 
 const Clrbutton = (props) => {
   return (
