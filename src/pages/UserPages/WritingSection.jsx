@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import classes from "../../styles/pages/UserPages/WritingSection.module.css";
 import Clrbutton from "../../components/UI/Buttons/ClrButton";
 
-function WritingSection() {
+function WritingSection(props) {
   const titleRef = useRef("");
   const visitDateRef = useRef("");
   const commentRef = useRef("");
@@ -15,6 +15,7 @@ function WritingSection() {
       comment: commentRef.current.value,
     };
 
+    props.onAddRestaurant(restaurant);
     console.log(restaurant);
   };
 
