@@ -8,12 +8,11 @@ import UserLayout from "../pages/UserPages/UserLayout";
 function UserRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<UserLayout />}>
-        <Route path="check" element={<CheckSection />} />
-        <Route path="favorite" element={<FavoriteSecton />} />
-        <Route path="Profile" element={<ProfileSection />} />
-        <Route path="Write" element={<WritingSection />} />
-      </Route>
+      <Route path="/" element={<UserLayout />} />
+      <Route path="check" element={<CheckSection />} />
+      <Route path="favorite" element={<FavoriteSecton />} />
+      <Route path="Profile" element={<ProfileSection />} />
+      <Route path="Write" element={<WritingSection />} />
     </Routes>
   );
 }
