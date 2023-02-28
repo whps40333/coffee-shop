@@ -9,11 +9,15 @@ function WritingSection(props) {
 
   function submitHandler(event) {
     event.preventDefault();
+
+    // could add validation here...
+
     const restaurant = {
       title: titleRef.current.value,
       visitDate: visitDateRef.current.value,
       comment: commentRef.current.value,
     };
+
     console.log(restaurant);
     props.onAddRestaurant(restaurant);
   }

@@ -11,7 +11,7 @@ function CommentSection() {
     setError(null);
     try {
       const response = await fetch(
-        "https://coffee-writing-default-rtdb.firebaseio.com/restaurant.json"
+        "https://coffee-writing-default-rtdb.firebaseio.com/restaurants.json"
       );
       if (!response.ok) {
         throw new Error("Something went wrong!");
@@ -56,7 +56,7 @@ function CommentSection() {
   }
   return (
     <>
-      <button onClick={fetchRestaurantHandler}>Fetch Restaurant</button>
+      <button onClick={fetchRestaurantHandler}>查看評論</button>
       <section>{content}</section>
     </>
   );

@@ -2,12 +2,12 @@ import React from "react";
 import WritingSection from "./WritingSection";
 
 function UserLayout() {
-  async function addRestaurantHandler(restaurant) {
+  async function addRestaurantHandler(restauraat) {
     const response = await fetch(
-      "https://react-http-f2802-default-rtdb.firebaseio.com/restaurants.json",
+      "https://coffee-writing-default-rtdb.firebaseio.com/restaurants.json",
       {
         method: "POST",
-        body: JSON.stringify(restaurant),
+        body: JSON.stringify(restauraat),
         headers: {
           "Content-Type": "application/json",
         },
