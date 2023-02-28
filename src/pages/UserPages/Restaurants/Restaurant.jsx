@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../../../styles/pages/UserPages/Comments/Comments.module.css";
 
-const Comment = (props) => {
+const Restaurant = (props) => {
   return (
     <li className={classes.wrapper}>
       <h2>{props.title}</h2>
@@ -11,4 +11,4 @@ const Comment = (props) => {
   );
 };
 
-export default Comment;
+export default Restaurant;

@@ -1,4 +1,4 @@
-.comment {
+.wrapper {
   margin: 1rem;
   padding: 1rem;
   background-color: white;
@@ -8,11 +8,11 @@
   color: 000000;
 }
 
-.comment h2 {
+.wrapper h2 {
   font-size: 2rem;
 }
 
-.comment h3 {
+.wrapper h3 {
   margin: 0;
   font-size: 1rem;
 }

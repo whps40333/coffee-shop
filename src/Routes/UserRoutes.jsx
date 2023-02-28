@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import CheckSection from "../pages/UserPages/CheckSection";
+import CommentSection from "../pages/UserPages/CommentSection";
 import FavoriteSecton from "../pages/UserPages/FavroiteSection";
 import ProfileSection from "../pages/UserPages/ProfileSection";
 import WritingSection from "../pages/UserPages/WritingSection";
@@ -9,7 +9,7 @@ function UserRoutes() {
   return (
     <Routes>
       <Route path="/" element={<UserLayout />} />
-      <Route path="check" element={<CheckSection />} />
+      <Route path="comment" element={<CommentSection />} />
       <Route path="favorite" element={<FavoriteSecton />} />
       <Route path="Profile" element={<ProfileSection />} />
       <Route path="Write" element={<WritingSection />} />

@@ -7,17 +7,16 @@ function WritingSection(props) {
   const visitDateRef = useRef("");
   const commentRef = useRef("");
 
-  const submitHandler = (event) => {
+  function submitHandler(event) {
     event.preventDefault();
     const restaurant = {
       title: titleRef.current.value,
       visitDate: visitDateRef.current.value,
       comment: commentRef.current.value,
     };
-
-    props.onAddRestaurant(restaurant);
     console.log(restaurant);
-  };
+    props.onAddRestaurant(restaurant);
+  }
 
   return (
     <form onSubmit={submitHandler}>
