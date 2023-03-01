@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import classes from "../../styles/pages/UserPages/WritingSection.module.css";
 import Clrbutton from "../../components/UI/Buttons/ClrButton";
 
@@ -10,8 +10,6 @@ function WritingSection(props) {
   function submitHandler(event) {
     event.preventDefault();
 
-    // could add validation here...
-
     const restaurant = {
       title: titleRef.current.value,
       visitDate: visitDateRef.current.value,
@@ -19,8 +17,22 @@ function WritingSection(props) {
     };
 
     console.log(restaurant);
-    props.onAddRestaurant(restaurant);
   }
+
+  const addRestaurantHandler = async (restaurant) => {
+    const response = await fetch(
+      "https://coffee-writing-default-rtdb.firebaseio.com/restaurants.json",
+      {
+        method: "POST",
+        body: JSON.stringify(restaurant),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+  };
 
   return (
     <form onSubmit={submitHandler}>
@@ -46,7 +58,9 @@ function WritingSection(props) {
           placeholder="用餐回饋"
         ></textarea>
       </div>
-      <Clrbutton type="submit">提交</Clrbutton>
+      <Clrbutton type="submit" onClick={addRestaurantHandler}>
+        提交
+      </Clrbutton>
     </form>
   );
 }
